@@ -14,7 +14,10 @@ cache:
 
 # 프로젝트 내부의 gradlew을 통해 clean & build 수행
 script: "./gradlew clean build"
-
+# gradlew 파일에는 프로젝트 생성시점에 실행권한이 부여되며, 그 파일이 깃허브에 올라가기 때문에 별도의 x 권한(실행)을 주지않아도 된다.
+# - chmod +x gradlew로 실행권한을 부여해 줘서 오류 해결 다른 방법으론 gradlew에 실행권한을 추가하고 githup에 올려도 해결 가능하다.
+before_install:
+  - chmod +x gradlew
 # CI 실행 완료시 메일로 알람
 notifications:
   email:
