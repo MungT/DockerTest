@@ -37,8 +37,8 @@ jobs:
         run: |
           docker login -u ${{ secrets.DOCKERHUB_USERNAME }} -p ${{ secrets.DOCKERHUB_TOKEN }}
           docker build -t docker-build-test .
-          docker tag docker-build-test taehoon/docker-build-test:latest
-          docker push taehoon/docker-build-test:latest
+          docker tag docker-build-test mungt/docker-build-test:latest
+          docker push mungt/docker-build-test:latest
 
 
 #      - name: Get timestamp
