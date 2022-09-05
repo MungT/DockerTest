@@ -36,9 +36,9 @@ jobs:
       - name: Docker build
         run: |
           docker login -u ${{ secrets.DOCKERHUB_USERNAME }} -p ${{ secrets.DOCKERHUB_TOKEN }}
-          docker build -t spring-boot-cicd .
-          docker tag spring-boot-cicd taeong/spring-boot-cicd:latest
-          docker push taeong/spring-boot-cicd:latest
+          docker build -t docker-build-test .
+          docker tag docker-build-test taehoon/docker-build-test:latest
+          docker push taehoon/docker-build-test:latest
 
 
 #      - name: Get timestamp
