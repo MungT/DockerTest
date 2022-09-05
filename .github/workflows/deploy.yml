@@ -1,8 +1,10 @@
 name: Test & Deploy
 
 on:
-  pull_requests:
+  pull_request:
     branches: [ master ]
+  push:
+    branches:  [ master ]
 
 jobs:
   test-and-deploy:
